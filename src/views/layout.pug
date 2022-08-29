@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title= `${title}`
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/css/styles.css')
+
+  body
+    div.container.listing-reg
+
+      h1=`${h1}`
+
+      nav.navbar.navig
+        a.nav-link.btn.btn-outline-light.btn-sm(href='/') List souvenirs (articles)
+        a.nav-link.btn.btn-outline-light.btn-sm(href='/table') List souvenirs (table)
+        a.nav-link.btn.btn-outline-light.btn-sm(href='/input') Add a souvenir
+
+
+      block content

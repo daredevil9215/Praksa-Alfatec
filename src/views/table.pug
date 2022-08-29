@@ -1,0 +1,76 @@
+extends layout
+
+
+block content
+
+  if suveniri.length
+
+    div.d-flex.flex-row-reverse
+        form.form-control-sm(action="/filter_table" method="POST")
+
+          input(
+              type='text'
+              id='search'
+              name='search'
+          )
+
+          select(name="field" id="field")
+            option(value="name") Name
+            option(value="price") Price
+            option(value="color") Color
+            option(value="quantity") Quantity
+            option(value="description") Description
+
+          input(
+          type="submit"
+          value="Filter"
+          )
+
+    table.listing-table.table-dark.table-striped
+      tr
+        th Name
+          div
+            a(href='/table/sort_name_asc')
+              i.arrow.up
+            a(href='/table/sort_name_desc')
+              i.arrow.down
+        th Price 
+          div
+            a(href='/table/sort_price_asc')
+              i.arrow.up
+            a(href='/table/sort_price_desc')
+              i.arrow.down
+        th Color 
+          div
+            a(href='/table/sort_color_asc')
+              i.arrow.up
+            a(href='/table/sort_color_desc')
+              i.arrow.down
+        th Quantity 
+          div
+            a(href='/table/sort_quantity_asc')
+              i.arrow.up
+            a(href='/table/sort_quantity_desc')
+              i.arrow.down
+        th Description
+        th Image
+        th Action
+      each suvenir in suveniri
+        tr
+          td= suvenir.name
+          td= suvenir.price + ' kn'
+          td= suvenir.color
+          td= suvenir.quantity 
+          td= suvenir.description
+          td 
+            img.img-fluid.my-img(src=suvenir.productImageUrl, alt=suvenir.name, onclick="window.open('" + suvenir.productImageUrl + "', '_blank');")
+          td
+            form(method='POST' action='/delete')
+                        input(type='hidden' name='_id' value=suvenir._id)
+                        input.my-button.btn.btn-outline-danger(type='submit' value='Delete')
+            form(method='POST' action='/alter')
+                        input(type='hidden' name='_id' value=suvenir._id)
+                        input.my-button.btn.btn-outline-info(type='submit' value='Modify')
+          
+  else
+    p No souvenirs found

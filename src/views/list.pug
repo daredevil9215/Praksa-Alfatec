@@ -1,0 +1,46 @@
+extends layout
+
+block content
+
+    if suveniri.length
+
+        div.d-flex.flex-row-reverse
+            form.form-control-sm(action="/filter_list" method="POST")
+
+                input(
+                    type='text'
+                    id='search'
+                    name='search'
+                )
+
+                select(name="field" id="field")
+                    option(value="name") Name
+                    option(value="price") Price
+                    option(value="color") Color
+                    option(value="quantity") Quantity
+                    option(value="description") Description
+
+                input(
+                type="submit"
+                value="Filter"
+                )
+
+        div.container
+            div.row
+                each suvenir in suveniri
+                    div.col-lg-4.my-div.text-center
+                        img.img-fluid(src=suvenir.productImageUrl, alt=suvenir.name, onclick="window.open('" + suvenir.productImageUrl + "', '_blank');") 
+                        h4.h4=suvenir.name 
+                        p=suvenir.description
+                        p='Price: ' + suvenir.price + ' kn'
+                        p='Currently available: ' + suvenir.quantity + ' pcs'
+                        div.btn-group.buttons-margin
+                            form(method='POST' action='/delete_2')
+                                input(type='hidden' name='_id' value=suvenir._id)
+                                input.btn.btn-outline-danger.button-margin(type='submit' value='Delete')
+                            form(method='POST' action='/alter')
+                                input(type='hidden' name='_id' value=suvenir._id)
+                                input.btn.btn-outline-info.button-margin(type='submit' value='Modify')
+
+    else
+        p No souvenirs found

@@ -1,0 +1,56 @@
+[
+    {
+        "name": "Key chain",
+        "barCode": "AAAA-AAAA-AAAA",
+        "color": "gray",
+        "quantity": "1",
+        "productImageUrl":"https://4.imimg.com/data4/HL/CD/MY-4107209/corporate-gift-keychain-500x500.jpg",
+        "price": "35",
+        "description": "The key chain that you will never lose due to its shinyness."
+    }, 
+    {
+        "name": "Schnaps",
+        "barCode": "BBBB-BBBB-BBBB",
+        "color": "yellow",
+        "quantity": "7",
+        "productImageUrl":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc5-otCSWSegLYCUXdnB2n0IHdw_ElrTvVXg&usqp=CAU",
+        "price": "130",
+        "description": "Hard alcoholic beverage made locally in Balkan countries."
+    },
+    {
+        "name": "Magnet",
+        "barCode": "CCCC-CCCC-CCCC",
+        "color": "green",
+        "quantity": "4",
+        "productImageUrl":"https://souvenirs.com.hr/upload_data/site_photos/img_20200424_152441.jpg",
+        "price": "20",
+        "description": "Magnet with an incredible magnetic force."
+    },
+    {
+        "name": "Decoration napkin",
+        "barCode": "DDDD-DDDD-DDDD",
+        "color": "red",
+        "quantity": "13",
+        "productImageUrl":"https://m.media-amazon.com/images/I/91s--Mjh9fL._AC_SL1500_.jpg",
+        "price": "50",
+        "description": "Red decoration napkin for your fancy dinner parties."
+    },
+    {
+        "name": "Beer opener",
+        "barCode": "EEEE-EEEE-EEEE",
+        "color": "black",
+        "quantity": "23",
+        "productImageUrl":"http://sc04.alicdn.com/kf/H1cfddae736634cbd895593147e0c293el.jpg",
+        "price": "70",
+        "description": "Beer opener made out of aluminum and black steel."
+    },
+    {
+        "name": "Metal Mug",
+        "barCode": "FFFF-FFFF-FFFF",
+        "color": "brown",
+        "quantity": "17",
+        "productImageUrl":"https://img.freepik.com/premium-vector/metal-mug-stainless-steel-cup-aluminum-tin-flask_83194-867.jpg?w=2000",
+        "price": "45",
+        "description": "Sturdy and heavy metal mug."
+    }
+]
